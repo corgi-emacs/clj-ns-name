@@ -84,7 +84,6 @@
   (add-hook 'after-save-hook #'clj-ns-name-rename-clj-buffer-to-namespace*))
 
 (defun clj-ns-name-uninstall ()
-  (advice-remove 'rename-buffer #'clj-ns-name-rename-buffer-advice)
   (advice-remove 'find-file-noselect #'clj-ns-name-find-file-noselect-advice)
   (advice-remove 'create-file-buffer #'clj-ns-name-create-file-buffer-advice)
   (remove-hook 'after-save-hook #'clj-ns-name-rename-clj-buffer-to-namespace*))
