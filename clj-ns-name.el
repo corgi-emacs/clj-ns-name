@@ -51,6 +51,7 @@
         (rename-buffer ns-name t)))))
 
 (defun clj-ns-name-rename-clj-buffer-to-namespace (buffer)
+  (interactive "b")
   (with-current-buffer buffer
     (clj-ns-name-rename-clj-buffer-to-namespace*)))
 
